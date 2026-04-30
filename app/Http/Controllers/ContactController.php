@@ -16,7 +16,8 @@ class ContactController extends Controller
 
     public function upload(Request $req)
     {
-        $file = fopen($req->file('file'), 'r');
+        //$file = fopen($req->file('file'), 'r');
+        $file = fopen($req->file('file')->getRealPath(), 'r');
         fgetcsv($file);
         while (($data = fgetcsv($file)) !== false) {
             Contact::create([
