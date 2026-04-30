@@ -8,11 +8,13 @@
 </div>
 <h2 class="mb-4">Contacts</h2>
 
-<form class="mb-3">
-    <input type="file" class="form-control mb-2">
-    <button class="btn btn-primary">Upload</button>
-</form>
+<form class="mb-3" method="POST" action="/upload" enctype="multipart/form-data">
+    @csrf
 
+    <input type="file" name="file" class="form-control mb-2">
+
+    <button type="submit" class="btn btn-primary">Upload CSV</button>
+</form>
 <table class="table table-bordered">
     <tr>
         <th>Name</th>
