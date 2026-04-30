@@ -12,7 +12,7 @@
     <div class="container">
         <a class="navbar-brand">Bulk Email System</a>
         <div>
-            <a href="/contacts" class="text-white me-3">Contacts</a>
+            <a href="/" class="text-white me-3">Contacts</a>
             <a href="/templates" class="text-white me-3">Templates</a>
             <a href="/campaigns" class="text-white me-3">Campaigns</a>
             <a href="/logs" class="text-white">Logs</a>
