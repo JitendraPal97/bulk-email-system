@@ -48,7 +48,8 @@ class CampaignController extends Controller
         foreach ($data as $d) {
 
             $contact = Contact::find($d->contact_id);
-            $template = DB::table('templates')->find(1);
+            //$template = DB::table('templates')->find(1);
+            $template = DB::table('templates')->find($campaign->template_id);
 
             $message = str_replace('{{name}}', $contact->name, $template->body);
 
